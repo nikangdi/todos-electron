@@ -1,0 +1,43 @@
+{
+  "name": "todos",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": ".\\node_modules\\.bin\\electron .",
+    "build": ".\\node_modules\\.bin\\electron-builder -w"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "vue": "^2.5.17"
+  },
+  "devDependencies": {
+    "electron": "^2.0.8",
+    "electron-builder": "^21.2.0"
+  },
+  "build": {
+    "appId": "com.kd.app",
+    "productName": "todos",
+    "directories": {
+      "output": "./dist"
+    }
+  },
+  "win": {
+    "icon": "./source/logo.ico",
+    "target": [
+      "nsis",
+      "zip"
+    ]
+  },
+  "nsis": {
+    "oneClick": false,
+    "allowToChangeInstallationDirectory": true,
+    "installerIcon": "./source/logo.ico",
+    "installerHeader": "./source/header.bmp",
+    "license": "./source/license.txt"
+  }
+
+}
